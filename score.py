@@ -9,7 +9,13 @@ Original file is located at
 
 grades = input().split()
 
-grades = [int(i) for i in grades]
+maxPeople = 0
+minPeople = 100
+
+for i in grades:
+  if(int(i)>maxPeople):maxPeople = int(i)
+  elif(int(i)<minPeople):minPeople = int(i)
+print(maxPeople, minPeople)
 
 average = sum(grades) / len(grades)
 
